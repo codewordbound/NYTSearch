@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Nyt Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron" style="background-color: #20315a">
+                <h1 class="text-center" style="color: white" ><i class="fa fa-newspaper-o"> New York Times Search</i></h1>
+            </div>
+            <div class="panel panel-default" style="border-color: black">
+                <div class="panel-heading" style="background-color: black; color: white">
+                    <div class="panel-title" ><i class="fa fa-list-alt"></i> Search Parameters</div>
+                </div>
+                <div class="panel-body">
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <label for="searchTerm">Search Term:</label>
+                            <input type="searchTerm" class="form-control" id="searchTerm">
+                        </div>
+                        <div class="form-group">
+                        	<label for="numRecord">Number of Records to Retrieve:</label>
+                            <input type="numRecord" class="form-control" id="numRecord">
+                        </div>
+                        <div class="form-group">
+                            <label for="startYear">Start Year (Optional):</label>
+                            <input type="startYear" class="form-control" id="startYear">
+                        </div>
+                        <div class="form-group">
+                            <label for="endYear">End Year (Optional):</label>
+                            <input type="endYear" class="form-control" id="endYear">
+                        </div>
+
+                        <button type="submit" id="run-search" class="btn btn-default" style="background-color: green; color: white"><i class="fa fa-search"></i> Search</button>
+                        <button type="clear" id="run-clear" class="btn btn-default" style="background-color: green; color: white"><i class="fa fa-trash"></i> Clear Results</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+         <div class="row">
+            <div class="panel panel-default" id="panelStyle" style="border-color: black">
+                <div class="panel-heading" style="background-color: black; color: white">
+                    <div class="panel-title" ><i class="fa fa-table"></i> Top Articles</div>
+                </div>
+                <div class="panel-body text-center">
+                    <div id="topArticles"></div>
+                </div>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="code.js"></script>
+</body>
+
+</html>
